@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Thông tin"
+        android:id="@+id/toolbar_thongtin"
+        android:background="#00BCD4"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:background="@drawable/backgroundtt"
+       android:layout_height="match_parent">
+       <TextView
+           android:layout_marginTop="30dp"
+           android:layout_width="match_parent"
+           android:gravity="center"
+           android:text="Thông Tin của hàng"
+           android:textSize="30dp"
+           android:textStyle="bold"
+           android:textColor="#FFFFFF"
+           android:layout_height="wrap_content"/>
+       <LinearLayout
+           android:layout_margin="30dp"
+           android:background="@drawable/boder_thongtinkhach"
+           android:layout_gravity="center"
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginTop="25dp">
+           <TextView
+               android:layout_margin="15dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/ic_baseline_location_on_24"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_margin="15dp"
+               android:layout_height="wrap_content"
+               android:text="209 Đội Cấn, Ba Đình, Hà Nội"
+               android:textSize="20dp"
+               android:id="@+id/tv_diachishop"/>
+       </LinearLayout>
+       <LinearLayout
+           android:background="@drawable/boder_thongtinkhach"
+           android:layout_gravity="center"
+           android:layout_width="match_parent"
+           android:layout_margin="30dp"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:layout_marginBottom="20dp"
+           android:layout_marginTop="25dp">
+       <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:map="http://schemas.android.com/apk/res-auto"
+           xmlns:tools="http://schemas.android.com/tools"
+           android:id="@+id/map"
+           android:name="com.google.android.gms.maps.SupportMapFragment"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           tools:context=".activity.ThongTinShopActivity" />
+       </LinearLayout>
+   </LinearLayout>
+</LinearLayout>
